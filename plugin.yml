@@ -7,7 +7,7 @@ main: Jorgebyte\AntiBugPing\Main
 permissions:
   antibugping.bypass:
     default: op
-    description: Bypass completo de mitigaciones de AntiBugPing
+    description: Full bypass of AntiBugPing mitigations
   antibugping.notify:
     default: op
-    description: Recibe alertas de mitigaciones de AntiBugPing
+    description: Receive AntiBugPing mitigation alerts
