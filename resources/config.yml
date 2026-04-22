@@ -1,0 +1,48 @@
+# AntiBugPing - Default profile
+profile: balanced
+enabled: true
+debug: false
+
+# Number of recent samples kept for ping and input intervals.
+sample-size: 20
+min-ping-samples: 8
+min-input-samples: 8
+
+thresholds:
+  # Median ping threshold where we start adding risk.
+  high-ping-ms: 320
+  # Critical ping threshold that adds extra risk.
+  critical-ping-ms: 500
+  # Jitter threshold measured from packet interval variance.
+  high-jitter-ms: 170
+  # Max silent interval (ticks) before a burst is considered suspicious.
+  silent-ticks: 16
+  # Keep "unstable network" state alive for a short window after a signal.
+  unstable-memory-ticks: 50
+  # Minimum ticks before scoring the same action reason again.
+  action-score-cooldown-ticks: 12
+
+score:
+  # Automatic score decay each server tick.
+  decay-per-tick: 0.18
+  thresholds:
+    restrict: 5.0
+    setback: 8.0
+    freeze: 11.0
+    kick: 15.0
+
+mitigation:
+  restrict-ticks: 30
+  freeze-ticks: 20
+  teleport-grace-ticks: 40
+  kick-enabled: false
+  notify-staff: true
+
+watchdog:
+  enabled: true
+  interval-ticks: 2
+  quarantine-after-silent-multiplier: 2
+  quarantine-freeze-ticks: 12
+
+excluded-worlds: []
+

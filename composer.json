@@ -1,0 +1,22 @@
+{
+  "name": "jorgebyte/antibugping",
+  "description": "PocketMine-MP plugin to mitigate lag-switch/desync abuse with progressive mitigation.",
+  "type": "project",
+  "license": "GPL-3.0-only",
+  "require": {
+    "php": ">=8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jorgebyte\\AntiBugPing\\": "src/Jorgebyte/AntiBugPing/"
+    }
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.65"
+  },
+  "scripts": {
+    "lint": "php -l src/Jorgebyte/AntiBugPing/Main.php",
+    "test": "php tests/run.php"
+  }
+}
+
